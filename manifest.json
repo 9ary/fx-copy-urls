@@ -1,0 +1,33 @@
+{
+    "manifest_version": 2,
+    "name": "Copy tab URL",
+    "version": "1.0",
+    "description": "Copy the URL of the current tab with ctrl+y",
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "clipboardWrite"
+    ],
+
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+
+    "commands": {
+        "copy-url": {
+            "suggested_key": {
+                "default": "Ctrl+Y"
+            },
+            "description": "Copy the URL of the current tab"
+        },
+        "copy-all-urls": {
+            "suggested_key": {
+                "default": "Alt+Y"
+            },
+            "description": "Copy the URLs of all tabs in the current window"
+        }
+    }
+}
